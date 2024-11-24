@@ -1,6 +1,8 @@
 package com.vaccine.vaccine_management;
 
+import com.vaccine.vaccine_management.model.CentroVacunacion;
 import com.vaccine.vaccine_management.model.CitaMedica;
+import com.vaccine.vaccine_management.repository.CentroVacunacionRepository;
 import com.vaccine.vaccine_management.repository.CitaMedicaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,6 +16,9 @@ class VaccineManagementApplicationTests {
 
 	@Autowired
 	private CitaMedicaRepository citaMedicaRepository;
+
+	@Autowired
+	private CentroVacunacionRepository centroVacunacionRepository;
 
 	@BeforeEach
 	void limpiarBaseDeDatos() {
@@ -66,4 +71,47 @@ class VaccineManagementApplicationTests {
 		// Verificar si se han guardado correctamente
 		assert citaMedicaRepository.findAll().size() == 4 : "No se guardaron todas las citas médicas";
 	}
+
+	@Test
+    void RegistrarCentroVacunacion() {
+
+		CentroVacunacion centroVacunacion = new CentroVacunacion();
+		centroVacunacion.setDireccion("Av. José Pardo 796, Miraflores, Lima.");
+		centroVacunacion.setNombrecentro("Centro de Salud Miraflores del MINSA");
+		centroVacunacion.setTelefono("(01) 617-2730");
+		centroVacunacion.setTipo_vacuna("COVID-19, influenza, hepatitis B.");
+		centroVacunacion.setLatitud(-12.119142);
+		centroVacunacion.setLongitud(-77.029686);
+
+		CentroVacunacion centroVacunacion2 = new CentroVacunacion();
+		centroVacunacion2.setDireccion("Av. Mariscal La Mar 1390, Miraflores, Lima.");
+		centroVacunacion2.setNombrecentro("Policlínico Santa Cruz de EsSalud");
+		centroVacunacion2.setTelefono("(01) 265-4800");
+		centroVacunacion2.setTipo_vacuna("COVID-19, influenza, neumococo.");
+		centroVacunacion2.setLatitud(-12.113784);
+		centroVacunacion2.setLongitud(-77.045524);
+
+		CentroVacunacion centroVacunacion3 = new CentroVacunacion();
+		centroVacunacion3.setDireccion("Av. Caminos del Inca 257, Santiago de Surco, Lima");
+		centroVacunacion3.setNombrecentro("Centro de Vacunación Internacional Biovac Perú - Surco");
+		centroVacunacion3.setTelefono("(01) 637-1000");
+		centroVacunacion3.setTipo_vacuna("Fiebre amarilla, tifoidea, hepatitis A y B.");
+		centroVacunacion3.setLatitud(-12.121500);
+		centroVacunacion3.setLongitud(-76.996800);
+
+		CentroVacunacion centroVacunacion4 = new CentroVacunacion();
+		centroVacunacion4.setDireccion("Calle Puente Grau 109, Arequipa");
+		centroVacunacion4.setNombrecentro("Centro de Salud Santa Rosa - Arequipa");
+		centroVacunacion4.setTelefono("(054) 234-5678");
+		centroVacunacion4.setTipo_vacuna("COVID-19, influenza, hepatitis B");
+		centroVacunacion4.setLatitud(-16.398803);
+		centroVacunacion4.setLongitud(-71.536961);
+
+		centroVacunacionRepository.save(centroVacunacion);
+		centroVacunacionRepository.save(centroVacunacion2);
+		centroVacunacionRepository.save(centroVacunacion3);
+		centroVacunacionRepository.save(centroVacunacion4);
+
+	}
+
 }
