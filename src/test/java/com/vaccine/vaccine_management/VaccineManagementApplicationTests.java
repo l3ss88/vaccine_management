@@ -82,6 +82,7 @@ class VaccineManagementApplicationTests {
 		centroVacunacion.setTipo_vacuna("COVID-19, influenza, hepatitis B.");
 		centroVacunacion.setLatitud(-12.119142);
 		centroVacunacion.setLongitud(-77.029686);
+		centroVacunacion.setEstado(1);
 
 		CentroVacunacion centroVacunacion2 = new CentroVacunacion();
 		centroVacunacion2.setDireccion("Av. Mariscal La Mar 1390, Miraflores, Lima.");
@@ -90,6 +91,7 @@ class VaccineManagementApplicationTests {
 		centroVacunacion2.setTipo_vacuna("COVID-19, influenza, neumococo.");
 		centroVacunacion2.setLatitud(-12.113784);
 		centroVacunacion2.setLongitud(-77.045524);
+		centroVacunacion2.setEstado(0);
 
 		CentroVacunacion centroVacunacion3 = new CentroVacunacion();
 		centroVacunacion3.setDireccion("Av. Caminos del Inca 257, Santiago de Surco, Lima");
@@ -98,6 +100,7 @@ class VaccineManagementApplicationTests {
 		centroVacunacion3.setTipo_vacuna("Fiebre amarilla, tifoidea, hepatitis A y B.");
 		centroVacunacion3.setLatitud(-12.121500);
 		centroVacunacion3.setLongitud(-76.996800);
+		centroVacunacion3.setEstado(1);
 
 		CentroVacunacion centroVacunacion4 = new CentroVacunacion();
 		centroVacunacion4.setDireccion("Calle Puente Grau 109, Arequipa");
@@ -106,6 +109,7 @@ class VaccineManagementApplicationTests {
 		centroVacunacion4.setTipo_vacuna("COVID-19, influenza, hepatitis B");
 		centroVacunacion4.setLatitud(-16.398803);
 		centroVacunacion4.setLongitud(-71.536961);
+		centroVacunacion4.setEstado(0);
 
 		centroVacunacionRepository.save(centroVacunacion);
 		centroVacunacionRepository.save(centroVacunacion2);

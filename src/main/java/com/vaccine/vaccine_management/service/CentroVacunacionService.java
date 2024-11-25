@@ -17,10 +17,15 @@ public class CentroVacunacionService {
 
         return CentroVacunacionRepository.findAll();
 
-
-
-
     }
 
+   public List<CentroVacunacion> ObtenerCentroVacunacionPorDesc(String desc) {
 
+        return CentroVacunacionRepository.obtenernombrecentroDescripcion(desc);
+   }
+
+    public List<CentroVacunacion> ObtenerCentroVacunacionPorEstado(Integer estado) {
+
+        return CentroVacunacionRepository.obtenernombrecentroEstado(estado);
+    }
 }

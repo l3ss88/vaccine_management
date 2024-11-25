@@ -15,6 +15,9 @@ public class CentroVacunacion {
     @Column(name = "centronombre")
     private  String nombrecentro;
 
+    @Column(name = "estado")
+    private  Integer estado;
+
     @Column(name = "direccion")
     private  String direccion;
 
@@ -35,7 +38,7 @@ public class CentroVacunacion {
     public CentroVacunacion() {
     }
 
-    public CentroVacunacion(Integer idCentro, String nombrecentro, String direccion, String telefono, String tipo_vacuna, Double latitud, Double longitud) {
+    public CentroVacunacion(Integer idCentro, String nombrecentro, String direccion, String telefono, String tipo_vacuna, Double latitud, Double longitud, Integer estado) {
         this.idCentro = idCentro;
         this.nombrecentro = nombrecentro;
         this.direccion = direccion;
@@ -43,6 +46,7 @@ public class CentroVacunacion {
         this.tipo_vacuna = tipo_vacuna;
         this.latitud = latitud;
         this.longitud = longitud;
+        this.estado = estado;
     }
 
 
@@ -100,8 +104,13 @@ public class CentroVacunacion {
 
     public void setNombrecentro(String nombrecentro) {
         this.nombrecentro = nombrecentro;
-
-
     }
 
+    public Integer getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Integer estado) {
+        this.estado = estado;
+    }
 }
