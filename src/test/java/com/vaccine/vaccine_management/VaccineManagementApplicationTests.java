@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Date;
 
 @SpringBootTest
-class VaccineManagementApplicationTests {
+class  VaccineManagementApplicationTests {
 
 	@Autowired
 	private CitaMedicaRepository citaMedicaRepository;
