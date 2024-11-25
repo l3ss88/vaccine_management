@@ -38,6 +38,7 @@ public class CentroVacunacion {
     public CentroVacunacion() {
     }
 
+
     public CentroVacunacion(Integer idCentro, String nombrecentro, String direccion, String telefono, String tipo_vacuna, Double latitud, Double longitud, Integer estado) {
         this.idCentro = idCentro;
         this.nombrecentro = nombrecentro;

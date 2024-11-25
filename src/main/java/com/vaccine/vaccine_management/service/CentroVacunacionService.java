@@ -27,5 +27,6 @@ public class CentroVacunacionService {
     public List<CentroVacunacion> ObtenerCentroVacunacionPorEstado(Integer estado) {
 
         return CentroVacunacionRepository.obtenernombrecentroEstado(estado);
+
     }
 }

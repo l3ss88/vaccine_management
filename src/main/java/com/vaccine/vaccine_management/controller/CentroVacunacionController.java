@@ -30,6 +30,7 @@ public class CentroVacunacionController {
     }
 
 
+
     @GetMapping("/filtrarporestado/{estado}") //http:localhost:8090/api/centrovacunacion/filtrarporestado/
     public ResponseEntity<List<CentroVacunacion>> centrovacunaEstado(
             @PathVariable(value = "estado") String estado

@@ -20,4 +20,5 @@ public interface CentroVacunacionRepository extends JpaRepository <CentroVacunac
   public List<CentroVacunacion> obtenernombrecentroEstado(@Param("estado") Integer estado);
 
 
+
 }
