@@ -10,4 +10,5 @@ import java.util.List;
 public interface CentroVacunacionRepository extends JpaRepository <CentroVacunacion, Integer>   {
   List<CentroVacunacion> findByLatitud (Double id);
 
+
 }
