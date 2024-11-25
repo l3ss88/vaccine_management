@@ -26,8 +26,8 @@ public class VacunaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Vacuna> obtenerVacunaPorId(@PathVariable Integer id_vacuna) {
-        return vacunaService.obtenerVacunaPorId(id_vacuna)
+    public ResponseEntity<Vacuna> obtenerVacunaPorIdVacuna(@PathVariable Integer idVacuna) {
+        return vacunaService.obtenerVacunaPorIdVacuna(idVacuna)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
@@ -39,8 +39,8 @@ public class VacunaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarVacuna(@PathVariable Integer id_vacuna) {
-        vacunaService.eliminarVacuna(id_vacuna);
+    public ResponseEntity<Void> eliminarVacuna(@PathVariable Integer idVacuna) {
+        vacunaService.eliminarVacuna(idVacuna);
         return ResponseEntity.noContent().build();
     }
 }

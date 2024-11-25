@@ -1,7 +1,8 @@
 package com.vaccine.vaccine_management.model;
 
 import jakarta.persistence.*;
-import org.hibernate.mapping.List;
+
+import java.util.List;
 
 @Entity
 @Table(name = "vacunas")
@@ -9,10 +10,10 @@ public class Vacuna {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_vacuna")
-    private Integer id_vacuna;
+    private Integer idVacuna;
 
-    @Column(nullable = false)
-    private String nombre_vacuna;
+    @Column(name = "nombre_vacuna", nullable = false, unique = true)
+    private String nombre;
 
     @Column
     private String descripcion;
@@ -24,33 +25,30 @@ public class Vacuna {
     private Integer intervalo_dosis;
 
 
-    @OneToMany(mappedBy = "vacuna", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List historiales;
-
     // Constructores, getters y setters
     public Vacuna() {}
 
-    public Vacuna(String nombre_vacuna, String descripcion, Integer dosis_necesarias) {
-        this.nombre_vacuna = nombre_vacuna;
+    public Vacuna(String nombre_vacuna, String descripcion, Integer dosis_necesarias, Integer intervalo_dosis) {
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.dosis_necesarias = dosis_necesarias;
         this.intervalo_dosis = intervalo_dosis;
     }
 
     public Integer getId_vacuna() {
-        return id_vacuna;
+        return idVacuna;
     }
 
     public void setId_vacuna(Integer id_vacuna) {
-        this.id_vacuna = id_vacuna;
+        this.idVacuna = idVacuna;
     }
 
-    public String getNombre_vacuna() {
-        return nombre_vacuna;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombre_vacuna(String nombre_vacuna) {
-        this.nombre_vacuna = nombre_vacuna;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
@@ -77,11 +75,5 @@ public class Vacuna {
         this.intervalo_dosis = intervalo_dosis;
     }
 
-    public List getHistoriales() {
-        return historiales;
-    }
 
-    public void setHistoriales(List historiales) {
-        this.historiales = historiales;
-    }
 }

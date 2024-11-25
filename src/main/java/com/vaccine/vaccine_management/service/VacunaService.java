@@ -18,15 +18,15 @@ public class VacunaService {
         return vacunaRepository.findAll();
     }
 
-    public Optional<Vacuna> obtenerVacunaPorId(Integer id_vacuna) {
-        return vacunaRepository.findById(id_vacuna);
+    public Optional<Vacuna> obtenerVacunaPorIdVacuna(Integer idVacuna) {
+        return vacunaRepository.findById(idVacuna);
     }
 
     public Vacuna guardarVacuna(Vacuna vacuna) {
         return vacunaRepository.save(vacuna);
     }
 
-    public void eliminarVacuna(Integer id_vacuna) {
-        vacunaRepository.deleteById(id_vacuna);
+    public void eliminarVacuna(Integer idVacuna) {
+        vacunaRepository.deleteById(idVacuna);
     }
 }
