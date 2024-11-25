@@ -112,6 +112,7 @@ class VaccineManagementApplicationTests {
 		centroVacunacionRepository.save(centroVacunacion3);
 		centroVacunacionRepository.save(centroVacunacion4);
 
+
 	}
 
 }

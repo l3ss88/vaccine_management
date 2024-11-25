@@ -17,6 +17,7 @@ public class CentroVacunacionService {
 
         return CentroVacunacionRepository.findAll();
 
+
     }
 
 

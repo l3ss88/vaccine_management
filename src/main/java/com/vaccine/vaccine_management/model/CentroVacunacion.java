@@ -101,4 +101,5 @@ public class CentroVacunacion {
     public void setNombrecentro(String nombrecentro) {
         this.nombrecentro = nombrecentro;
     }
+
 }
