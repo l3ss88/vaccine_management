@@ -1,7 +1,8 @@
 package com.vaccine.vaccine_management.model;
 
 import jakarta.persistence.*;
-import org.hibernate.mapping.List;
+
+import java.util.List;
 
 @Entity
 @Table(name = "vacunas")
@@ -25,7 +26,7 @@ public class Vacuna {
 
 
     @OneToMany(mappedBy = "vacuna", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List historiales;
+    private List<HistorialVacunas> historiales;
 
     // Constructores, getters y setters
     public Vacuna() {}

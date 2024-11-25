@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/historial-vacunas")
 public class HistorialVacunasController {
-
+ /*
     @Autowired
     private HistorialVacunasService historialVacunasService;
 
@@ -23,5 +23,5 @@ public class HistorialVacunasController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(historial);
-    }
+    } */
 }

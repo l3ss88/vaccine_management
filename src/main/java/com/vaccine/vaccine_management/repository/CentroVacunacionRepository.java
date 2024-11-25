@@ -11,4 +11,5 @@ public interface CentroVacunacionRepository extends JpaRepository <CentroVacunac
   List<CentroVacunacion> findByLatitud (Double id);
 
 
+
 }

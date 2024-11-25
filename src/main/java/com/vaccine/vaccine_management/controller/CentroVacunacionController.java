@@ -23,6 +23,7 @@ public class CentroVacunacionController {
 
         return ResponseEntity.ok(centroVacunacionService.ObtenerCentroVacunacion());
 
+
     }
 
 
