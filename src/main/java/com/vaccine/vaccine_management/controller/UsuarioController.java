@@ -1,5 +1,6 @@
 package com.vaccine.vaccine_management.controller;
 
+import com.vaccine.vaccine_management.model.Usuario;
 import com.vaccine.vaccine_management.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,6 @@ public class UsuarioController {
         }
         return ResponseEntity.status(401).body("Correo o contraseña incorrectos");
     }
-
     public static class LoginRequest {
         private String correo;
         private String contrasena;
@@ -33,5 +33,11 @@ public class UsuarioController {
             return contrasena;
         }
 
+    }
+
+    @PostMapping("/registrarusuario") //http://localhost:8090/api/citas/registrar enviar el registro en formato json
+    public ResponseEntity<Usuario> registrarUsuario(@RequestBody Usuario usuario) {
+        Usuario nuevoUsuario= usuarioService.registrarusuario(usuario);
+        return ResponseEntity.ok(nuevoUsuario);
     }
 }

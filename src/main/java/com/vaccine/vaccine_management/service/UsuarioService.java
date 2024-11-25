@@ -1,4 +1,5 @@
 package com.vaccine.vaccine_management.service;
+import com.vaccine.vaccine_management.model.CitaMedica;
 import com.vaccine.vaccine_management.model.Usuario;
 import com.vaccine.vaccine_management.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,9 @@ public class UsuarioService {
             return true;
         }
         return false;
+    }
+
+    public Usuario registrarusuario(Usuario usuario) {
+        return usuarioRepository.save(usuario);
     }
 }
