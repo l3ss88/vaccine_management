@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class HistorialVacunasService {
 
-   /* @Autowired
+    @Autowired
     private HistorialVacunasRepository historialVacunasRepository;
 
-    public List obtenerHistorialPorUsuario(Integer usuarioId) {
-        return historialVacunasRepository.findByUsuarioId(usuarioId);
-    }*/
+    public List<HistorialVacunas> obtenerHistorialPorUsuario(Usuario usuario) {
+        return historialVacunasRepository.findByUsuario(usuario);
+    }
 }

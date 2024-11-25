@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface HistorialVacunasRepository extends JpaRepository<HistorialVacunas, Integer> {
-   /*List findByUsuarioId(Integer usuarioId); */
+public interface HistorialVacunasRepository extends JpaRepository<HistorialVacunas, Long > {
+    List<HistorialVacunas> findByUsuario(Usuario usuario);
 }

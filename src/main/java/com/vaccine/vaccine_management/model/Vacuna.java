@@ -1,8 +1,7 @@
 package com.vaccine.vaccine_management.model;
 
 import jakarta.persistence.*;
-
-import java.util.List;
+import org.hibernate.mapping.List;
 
 @Entity
 @Table(name = "vacunas")
@@ -24,9 +23,6 @@ public class Vacuna {
     @Column
     private Integer intervalo_dosis;
 
-
-    @OneToMany(mappedBy = "vacuna", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<HistorialVacunas> historiales;
 
     // Constructores, getters y setters
     public Vacuna() {}
@@ -78,11 +74,6 @@ public class Vacuna {
         this.intervalo_dosis = intervalo_dosis;
     }
 
-    public List getHistoriales() {
-        return historiales;
-    }
 
-    public void setHistoriales(List historiales) {
-        this.historiales = historiales;
-    }
+
 }
