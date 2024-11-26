@@ -21,5 +21,6 @@ public class UsuarioService {
 
     public Usuario registrarusuario(Usuario usuario) {
         return usuarioRepository.save(usuario);
+
     }
 }

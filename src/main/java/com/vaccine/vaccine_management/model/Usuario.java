@@ -31,7 +31,7 @@ public class Usuario {
     private Date fechaNacimiento;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "tipo_usuario", length = 20, nullable = false)
+    @Column(name = "tipo_usuario", length = 20)
     private TipoUsuario tipoUsuario;
 
     @Temporal(TemporalType.TIMESTAMP)
